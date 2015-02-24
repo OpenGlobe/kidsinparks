@@ -7,6 +7,8 @@ Background Information
 
 White House - [FACT SHEET: Launching the Every Kid in a Park Initiative and Designating New National Monuments](http://www.whitehouse.gov/the-press-office/2015/02/19/fact-sheet-launching-every-kid-park-initiative-and-designating-new-natio)
 
+[http://www.letsmove.gov/lets-move-outside] (http://www.letsmove.gov/lets-move-outside)
+
 [Google News Search](https://news.google.com/news/story?ncl=d-jw9BmzJuN4TrMGVJMr5uMAxvN6M&q=kids+in+parks&lr=English&hl=en&sa=X&ei=MZfrVLGTGsq9ggT_toCQCQ&ved=0CCIQqgIwAQ)
 
 Schedule
