@@ -12,11 +12,21 @@ White House - [FACT SHEET: Launching the Every Kid in a Park Initiative and Desi
 Schedule
 ---
 
-9:00 - 10:00 AM - Introduction to the Kids in Parks Initiative (DOI)
+1:00 - 1:20 PM Intro to Kids in Parks initiative and format of the mini-hackathon.
 
-12:00 - 4:00 PM - Mini-Hackathon.  Teams will develop designs and / or prototypes that address three key opportunities:
+12:00 - 4:00 PM - Mini-Hackathon.  Teams will develop designs and / or prototypes that address three key opportunities related to granting, accepting and revoking admission to parks for 4th graders.  The mini-hackathon will follow a modified Agile framework, with pitch sessions throughout an iterative process.
 
-- The Digital Youth Passport
-- 4th on the 4th - A Celebration of Civic Duty
-- Park in my Backyard - Development of a citizen science toolkit that enable kids to explore the outdoors, starting from their backyard and moving into national parks and waters.
+The mini-hackathon will investigate technology solutions for three types of users:
+
+1. Disadvantaged youth, and / or youth that otherwise wouldn't be drawn to parks [USER STORY]
+2. Employees that grant entrance to parks ("fee takers") [USER STORY]
+3. Teachers and Parents [USER STORY]
+
+- 1:20 PM - 2:00 PM - Round 1 - scoping of challenge, initial concept prototyping
+- 2:00 PM - 2:15 PM - Round 1 Presentations
+- 2:15 PM - 3:00 PM - Round 2 - Continuation of prototyping activity
+- 3:00 PM - 3:15 PM - Round 2 Presentations
+- 3:15 PM - 4:00 PM - Round 3 - Continuation of prototyping activity
+- 4:00 PM - 4:15 PM - Round 3 FINAL Presentations
+- 4:15 PM - 4:30 PM - Wrap-up
 
