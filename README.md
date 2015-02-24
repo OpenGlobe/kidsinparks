@@ -9,6 +9,8 @@ White House - [FACT SHEET: Launching the Every Kid in a Park Initiative and Desi
 
 [http://www.letsmove.gov/lets-move-outside] (http://www.letsmove.gov/lets-move-outside)
 
+[Podcast / Article: Think Like a Child] (http://feedproxy.google.com/~r/freakonomicsradio/~5/k30vzoITrD0/freakonomics_podcast052214.mp3)
+
 [Google News Search](https://news.google.com/news/story?ncl=d-jw9BmzJuN4TrMGVJMr5uMAxvN6M&q=kids+in+parks&lr=English&hl=en&sa=X&ei=MZfrVLGTGsq9ggT_toCQCQ&ved=0CCIQqgIwAQ)
 
 Schedule
