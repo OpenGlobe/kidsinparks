@@ -74,13 +74,14 @@ html, body, #googft-mapCanvas {
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(38.9837408031931, -96.62491916250002),
       zoom: 5,
-      mapTypeId: google.maps.MapTypeId.HYBRID
+      mapTypeId: google.maps.MapTypeId.HYBRID,
     });
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
-    // adding transit layer...
+        // adding transit layer...
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
+    
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
 
     layer = new google.maps.FusionTablesLayer({
       map: map,
