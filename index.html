@@ -149,8 +149,22 @@ ul li {
 .content table { 
 	width: 100%; 
 }
+.legend {
+    background: white;
+    padding: 1px;
+  }
+  
 
 </style>
+
+var legend = document.getElementById('legend');
+for (var style in styles) {
+  var name = style.name;
+  var icon = style.icon;
+  var div = document.createElement('div');
+  div.innerHTML = '<img src="' + icon + '"> ' + name;
+  legend.appendChild(div);
+}
 </head>
  
 <body bgcolor="#f6f6f6">
@@ -166,5 +180,13 @@ ul li {
                 
 <iframe width="1000" height="700" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2+from+1KkQWzEh8Dw3-EOhfFiOVW04weSG6PMhXprisZRdZ&amp;viz=MAP&amp;h=false&amp;lat=38.9837408031931&amp;lng=-96.62491916250002&amp;t=3&amp;z=5&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE">
 </iframe>
+
+<div id="legend">
+  Legend
+</div>
+
+map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
+  document.getElementById('legend'));
+
 </body>
 </html>
