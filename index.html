@@ -166,6 +166,10 @@ for (var style in styles) {
   legend.appendChild(div);
 }
 </script>
+<script>
+map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
+  document.getElementById('legend'));
+  </script>
 </head>
  
 <body bgcolor="#f6f6f6">
@@ -186,8 +190,6 @@ for (var style in styles) {
   Legend
 </div>
 
-map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
-  document.getElementById('legend'));
 
 </body>
 </html>
