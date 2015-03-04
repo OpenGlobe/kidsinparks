@@ -113,6 +113,22 @@ html, body, #googft-mapCanvas {
         legendOpenButton.style.display = 'block';
       }
     }
+    
+            // Create the legend and display on the map
+        var legend = document.createElement('div');
+        legend.id = 'legend';
+        var content = [];
+        content.push('<h3>Agencies</h3>');
+        content.push('<p><div class="color red"></div>NOAA</p>');
+        content.push('<p><div class="color orange"></div>USACE</p>');
+        content.push('<p><div class="color green"></div>FWS</p>');
+        content.push('<p><div class="color blue"></div>NPS</p>');
+        content.push('<p><div class="color purple"></div>BLM</p>');
+        content.push('<p>Source</p>');
+        legend.innerHTML = content.join('');
+        legend.index = 1;
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
@@ -121,6 +137,6 @@ html, body, #googft-mapCanvas {
 
 <body>
   <div id="googft-mapCanvas"></div>
-  <div id="googft-legend"><h3>Legend</h3></div>
+
 </body>
 </html>
