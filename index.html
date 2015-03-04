@@ -78,6 +78,9 @@ html, body, #googft-mapCanvas {
     });
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
+    // adding transit layer...
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
 
     layer = new google.maps.FusionTablesLayer({
       map: map,
