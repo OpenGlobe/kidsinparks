@@ -114,7 +114,7 @@ html, body, #googft-mapCanvas {
       }
     }
     
-            // Create the legend and display on the map
+        // Create the legend and display on the map
         var legend = document.createElement('div');
         legend.id = 'legend';
         var content = [];
@@ -127,7 +127,7 @@ html, body, #googft-mapCanvas {
         content.push('<p>Source</p>');
         legend.innerHTML = content.join('');
         legend.index = 1;
-        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+        map.controls[google.maps.ControlPosition.MIDDLE_BOTTOM].push(legend);
     
   }
 
