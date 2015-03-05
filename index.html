@@ -61,8 +61,7 @@ html, body, #googft-mapCanvas {
 
 <script type="text/javascript">
     
-    var layer_0;
-    
+    var layer_0;   
     
     
   function initialize() {
@@ -81,9 +80,11 @@ html, body, #googft-mapCanvas {
       zoom: 5,
       mapTypeId: google.maps.MapTypeId.TERRAIN,
     });
-        // Adding transit layer...
+
+    // Adding transit layer...
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
+      
     // Adding super-saturation...
     var style = [
         {
