@@ -60,6 +60,11 @@ html, body, #googft-mapCanvas {
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=visualization&amp;sensor=false"></script>
 
 <script type="text/javascript">
+    
+    var layer_0;
+    
+    
+    
   function initialize() {
     google.maps.visualRefresh = true;
     var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
@@ -85,27 +90,44 @@ html, body, #googft-mapCanvas {
           featureType: 'all',
           elementType: 'all',
           stylers: [
-            { saturation: 60 }
+            { saturation: 80 }
           ]
         }
       ];
     
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
-
-    layer = new google.maps.FusionTablesLayer({
-      map: map,
-      heatmap: { enabled: false },
-      query: {
-        select: "col2",
-        from: "1KkQWzEh8Dw3-EOhfFiOVW04weSG6PMhXprisZRdZ",
-        where: ""
-      },
-      options: {
+// Saturated Block...
+          var styledMapType = new google.maps.StyledMapType(style, {
+        map: map,
+        name: 'Styled Map'
+      });
+      map.mapTypes.set('map-style', styledMapType);
+      map.setMapTypeId('map-style');
+      layer_0 = new google.maps.FusionTablesLayer({
+        query: {
+          select: "col2",
+          from: "1KkQWzEh8Dw3-EOhfFiOVW04weSG6PMhXprisZRdZ"
+        },
+        map: map,
         styleId: 2,
         templateId: 2
-      }
-    });
+      });
+// End saturated block.      
+  
+//    layer = new google.maps.FusionTablesLayer({
+//      map: map,
+//      heatmap: { enabled: false },
+//      query: {
+//        select: "col2",
+//        from: "1KkQWzEh8Dw3-EOhfFiOVW04weSG6PMhXprisZRdZ",
+//        where: ""
+//      },
+//      options: {
+//        styleId: 2,
+//        templateId: 2
+//      }
+//    });
 
     if (isMobile) {
       var legend = document.getElementById('googft-legend');
