@@ -74,11 +74,21 @@ html, body, #googft-mapCanvas {
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(38.9837408031931, -96.62491916250002),
       zoom: 5,
-      mapTypeId: google.maps.MapTypeId.HYBRID,
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
     });
-        // adding transit layer...
+        // Adding transit layer...
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
+    // Adding super-saturation...
+    var style = [
+        {
+          featureType: 'all',
+          elementType: 'all',
+          stylers: [
+            { saturation: 60 }
+          ]
+        }
+      ];
     
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
@@ -130,13 +140,21 @@ html, body, #googft-mapCanvas {
         map.controls[google.maps.ControlPosition.MIDDLE_BOTTOM].push(legend);
     
   }
-
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </head>
 
 <body>
   <div id="googft-mapCanvas"></div>
+  <div id="googft-legend">
+      <h3>Legend</h3>
+      <p style="color:red">NOAA</p>
+      <p style="color:orange">USACE</p>
+      <p style="color:green">FWS</p>
+      <p style="color:light blue">NPS</p>
+      <p style="color:purple">BLM</p>
+      <p style="color:#FF3399">USFS</p>
+    </div>    
 
 </body>
 </html>
