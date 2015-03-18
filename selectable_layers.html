@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Testing out some things via
+http://stackoverflow.com/questions/5484419/update-google-map-from-select-dropdown-menu
+and
+http://stackoverflow.com/questions/17342665/google-maps-api-v3-select-fusion-table-layer-from-drop-down-list
+and
+http://stackoverflow.com/questions/15293686/switching-between-layers-in-google-fusion-map-using-drop-down-box
+and
+http://www.webmasterworld.com/forum91/4032.htm
+-->
+<html>
+<head>
+<title>Sandbox testing ...</title>
+</head>
+ 
+<body>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<style type="text/css">
+#googft-mapCanvas {
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  width: 600px;
+}
+</style>
+<script type="text/javascript">
+  function initialize() {
+    var map_id = "1KwVVYRg1Ek8P8xVzjoc8l6F55XtQRsbl7ziMatQ"
+    google.maps.visualRefresh = true;
+    var map = new google.maps.Map(document.getElementById('googft-mapCanvas'), {
+      center: new google.maps.LatLng(35.18664317429875, -79.98538549804686),
+      zoom: 6,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
+
+    layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col4",
+        from: map_id,
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+  }
+  
+  function selectChange(){
+    var map_id = document.getElementById("map_no").value;
+    //google.maps.visualRefresh = true;
+    var map = new google.maps.Map(document.getElementById('googft-mapCanvas'), {
+      center: new google.maps.LatLng(35.18664317429875, -79.98538549804686),
+      zoom: 6,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
+
+    layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: { enabled: false },
+      query: {
+        select: "col4",
+        from: map_id,
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
+  };
+  
+  google.maps.event.addDomListener(window, 'load', initialize);
+  
+var textBlocks = new Array(  
+"Kidney failure can be caused by infection, or injury, but most commonly it's the result of having had diabetes over the course of many years. Treatment for kidney failure for people with other complications was one of the most common procedures in hospitals across North Carolina in 2011. Yet this newly released data from the Centers for Medicare and Medicaid Services show providers bill at vastly different amounts than the state average of $16,500.38.", 
+"Blood infections are serious conditions that often result in admission to an intensive care unit and supportive care on a breathing machine. Treatment for blood infection was one of the most common procedures in hospitals across North Carolina in 2011. Yet this newly released data from the Centers for Medicare and Medicaid Services show providers bill at vastly different amounts than the state average of $30,196.51.",
+"Treatment for gastrointestinal or esophageal distress (everything from food poisoning to irritable bowel syndrome to diverticulitis) was one of the most common procedures in hospitals across North Carolina in 2011. Yet this newly released data from the Centers for Medicare and Medicaid Services show providers bill at vastly different amounts than the state average of $14,643.03. One provider, Frye Regional Medical Center in Hickory, charged twice the state average.");
+
+function changeText(elemid) {
+var ind = document.getElementById(elemid).selectedIndex; 
+document.getElementById("display").innerHTML=textBlocks[ind]; 
+}
+
+</script>
+ 
+<div style="width:600px; display:block; margin-left:auto; margin-right:auto;">
+<h1 style="padding:0px; margin:10px 0 0 0;">The cost of care</h1>
+<select id="map_no" onchange="selectChange(); changeText('map_no');" style="width:600px; margin-top: 10px; margin-bottom:10px;">
+  <option value="1KwVVYRg1Ek8P8xVzjoc8l6F55XtQRsbl7ziMatQ">Kidney failure</option>
+  <option value="1yyE9ylUk_814fn6XoQz7iuZQISKtoLBXNSfrgjs">Blood infection</option>
+  <option value="1-5wffr4bfMB0TAtACmWLwfuX_ky3QennHMcvmXg">Gastrointestinal distress</option>
+</select>
+  <div id="googft-mapCanvas"></div>
+ 
+<div id="display" style="margin-top:10px;">Kidney failure can be caused by infection, or injury, but most commonly it's the result of having had diabetes over the course of many years. Treatment for kidney failure for people with other complications was one of the most common procedures in hospitals across North Carolina in 2011. Yet this newly released data from the Centers for Medicare and Medicaid Services show providers bill at vastly different amounts than the state average of $16,500.38.</div>
+</div> 
+</body>
+</html>
